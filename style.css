@@ -3,6 +3,13 @@
   font-size: 20px;
   font-weight: bold;
   --color: orange;
+  --gradient-width: 0%;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 h1 {
@@ -19,6 +26,7 @@ h1 {
 .reset {
   align-self: center;
 }
+
 .reset button {
   font-weight: bold;
   padding: 0.5rem;
@@ -31,12 +39,15 @@ h1 {
 }
 
 #counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 4rem;
   font-weight: bold;
-  text-align: center;
-}
 
-#counter p {
-  margin: 0;
-  padding: 4rem;
+  background: linear-gradient(
+    to right,
+    var(--color) var(--gradient-width),
+    white var(--gradient-width)
+  );
 }
